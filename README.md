@@ -25,18 +25,18 @@
 | Mod | 作用 | 创意工坊 |
 | --- | --- | --- |
 | [Continuous Recruitment 连续招募](ContinuousRecruit/README.md) | 持续招募选定的兵种，减少重复点击。 | [订阅](https://steamcommunity.com/sharedfiles/filedetails/?id=3810027038) |
-| [Auto Tax 自动调税](AutoTax/README.md) | 按食物等实际民心加成自动调整税率，让民心保持在目标区间（默认 99–99.5）附近；不会自动发补贴。 | 尚未公开 |
-| [Trade Presets 交易阈值预设](TradePresets/README.md) | 新对局沿用上次保存的市场买卖阈值；自动交易仍由你在市场里手动开启。 | 尚未公开 |
-| [Stock Delta 库存净变化](StockDelta/README.md) | 在库房、粮仓和武器库的数量下方显示上月和本月至今的净变化，看出库存在增还是在减。 | 尚未公开 |
-| [Granary Overview 粮仓总览](GranaryOverview/README.md) | 把食物开关、库存、月度变化和配给合并到同一个粮仓面板，并估算各配给等级的月度收支。 | 尚未公开 |
-| [Building Production 建筑实际产出](BuildingProduction/README.md) | 在建筑面板里显示每座生产建筑实际消耗和交付的物资。 | 尚未公开 |
+| [Auto Tax 自动调税](AutoTax/README.md) | 按食物等实际民心加成自动调整税率，让民心保持在目标区间（默认 99–99.5）附近；不会自动发补贴。 | [订阅](https://steamcommunity.com/sharedfiles/filedetails/?id=3816416634) |
+| [Trade Presets 交易阈值预设](TradePresets/README.md) | 新对局沿用上次保存的市场买卖阈值；自动交易仍由你在市场里手动开启。 | [订阅](https://steamcommunity.com/sharedfiles/filedetails/?id=3810027335) |
+| [Stock Delta 库存净变化](StockDelta/README.md) | 在库房、粮仓和武器库的数量下方显示上月和本月至今的净变化，看出库存在增还是在减。 | [订阅](https://steamcommunity.com/sharedfiles/filedetails/?id=3809944613) |
+| [Granary Overview 粮仓总览](GranaryOverview/README.md) | 把食物开关、库存、月度变化和配给合并到同一个粮仓面板，并估算各配给等级的月度收支。 | [订阅](https://steamcommunity.com/sharedfiles/filedetails/?id=3809944812) |
+| [Building Production 建筑实际产出](BuildingProduction/README.md) | 在建筑面板里显示每座生产建筑实际消耗和交付的物资。 | [订阅](https://steamcommunity.com/sharedfiles/filedetails/?id=3810026973) |
 
 ### 建造
 
 | Mod | 作用 | 创意工坊 |
 | --- | --- | --- |
 | [Optimal Resource Layout 资源区智能排布](ResourceLayout/README.md) | 按快捷键为有限的资源区规划农场、采石场、铁矿和沥青坑的布局，以幽灵建筑显示，由你决定是否照着建。 | [订阅](https://steamcommunity.com/sharedfiles/filedetails/?id=3810027826) |
-| [Build Grid 建筑对齐网格](BuildGrid/README.md) | 放置建筑时在鼠标周围显示网格，方便对齐建筑和预留通道。 | 尚未公开 |
+| [Build Grid 建筑对齐网格](BuildGrid/README.md) | 放置建筑时在鼠标周围显示网格，方便对齐建筑和预留通道。 | [订阅](https://steamcommunity.com/sharedfiles/filedetails/?id=3809944416) |
 
 快捷键、设置项、适用范围和限制写在各 Mod 自己的 README 里。
 
@@ -45,8 +45,6 @@
 1. 安装 [SHCDE BepInEx Loader](https://gitlab.com/rawra-stronghold-crusader/shcde-bepinex/-/releases)。
 2. 安装 [SHCDE Script Extender](https://gitlab.com/rawra-stronghold-crusader/shcde-script-extender/-/releases) 2.10.1 或更新版本。
 3. 在创意工坊订阅需要的 Mod，按提示重启游戏。
-
-标为“尚未公开”的 Mod 目前只有源码，需要自行编译。
 
 ## 联机
 

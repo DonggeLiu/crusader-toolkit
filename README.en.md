@@ -25,18 +25,18 @@ Players do not need this repository: install the prerequisites, then subscribe o
 | Mod | What it does | Workshop |
 | --- | --- | --- |
 | [Continuous Recruitment](ContinuousRecruit/README.en.md) | Keeps recruiting the troop types you choose, without repeated clicks. | [Subscribe](https://steamcommunity.com/sharedfiles/filedetails/?id=3810027038) |
-| [Auto Tax](AutoTax/README.en.md) | Adjusts the tax rate to your actual food and other popularity effects, aiming to keep popularity near a target band (99–99.5 by default). It never pays subsidies on its own. | Not public yet |
-| [Trade Presets](TradePresets/README.en.md) | Reuses your saved market buy and sell thresholds in each new game. Auto-trade stays off until you turn it on in the market. | Not public yet |
-| [Stock Delta](StockDelta/README.en.md) | Shows net changes for last month and this month so far below stockpile, granary and armoury counts, so you can see whether stocks are growing or shrinking. | Not public yet |
-| [Granary Overview](GranaryOverview/README.en.md) | Combines food switches, stock, monthly changes and ration controls in one granary panel, with an estimated monthly balance for each ration level. | Not public yet |
-| [Building Production](BuildingProduction/README.en.md) | Shows what each production building actually consumes and delivers, inside its building panel. | Not public yet |
+| [Auto Tax](AutoTax/README.en.md) | Adjusts the tax rate to your actual food and other popularity effects, aiming to keep popularity near a target band (99–99.5 by default). It never pays subsidies on its own. | [Subscribe](https://steamcommunity.com/sharedfiles/filedetails/?id=3816416634) |
+| [Trade Presets](TradePresets/README.en.md) | Reuses your saved market buy and sell thresholds in each new game. Auto-trade stays off until you turn it on in the market. | [Subscribe](https://steamcommunity.com/sharedfiles/filedetails/?id=3810027335) |
+| [Stock Delta](StockDelta/README.en.md) | Shows net changes for last month and this month so far below stockpile, granary and armoury counts, so you can see whether stocks are growing or shrinking. | [Subscribe](https://steamcommunity.com/sharedfiles/filedetails/?id=3809944613) |
+| [Granary Overview](GranaryOverview/README.en.md) | Combines food switches, stock, monthly changes and ration controls in one granary panel, with an estimated monthly balance for each ration level. | [Subscribe](https://steamcommunity.com/sharedfiles/filedetails/?id=3809944812) |
+| [Building Production](BuildingProduction/README.en.md) | Shows what each production building actually consumes and delivers, inside its building panel. | [Subscribe](https://steamcommunity.com/sharedfiles/filedetails/?id=3810026973) |
 
 ### Building
 
 | Mod | What it does | Workshop |
 | --- | --- | --- |
 | [Optimal Resource Layout](ResourceLayout/README.en.md) | Press a hotkey to plan farms, quarries, iron mines and pitch rigs around a limited resource area. Layouts appear as ghost buildings, and you decide whether to build them. | [Subscribe](https://steamcommunity.com/sharedfiles/filedetails/?id=3810027826) |
-| [Build Grid](BuildGrid/README.en.md) | Shows a tile grid around the cursor while placing a building, to help align buildings and leave paths. | Not public yet |
+| [Build Grid](BuildGrid/README.en.md) | Shows a tile grid around the cursor while placing a building, to help align buildings and leave paths. | [Subscribe](https://steamcommunity.com/sharedfiles/filedetails/?id=3809944416) |
 
 Hotkeys, settings, scope and limitations are described in each mod’s own README.
 
@@ -45,8 +45,6 @@ Hotkeys, settings, scope and limitations are described in each mod’s own READM
 1. Install the [SHCDE BepInEx Loader](https://gitlab.com/rawra-stronghold-crusader/shcde-bepinex/-/releases).
 2. Install the [SHCDE Script Extender](https://gitlab.com/rawra-stronghold-crusader/shcde-script-extender/-/releases), version 2.10.1 or newer.
 3. Subscribe to the mods you want on the Workshop and restart the game when prompted.
-
-Mods marked “Not public yet” are available as source only and must be built yourself.
 
 ## Multiplayer
 
