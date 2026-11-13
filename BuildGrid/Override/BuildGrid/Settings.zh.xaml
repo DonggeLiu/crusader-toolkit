@@ -1,0 +1,11 @@
+<StackPanel xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Margin="16">
+  <TextBlock Text="建筑对齐网格 · Build Grid" Foreground="White" FontSize="22" Margin="0,0,0,16" TextWrapping="Wrap"/>
+  <CheckBox Content="启用本功能" IsChecked="{Binding Enabled, Mode=TwoWay}" Foreground="White" Margin="0,0,0,16"/>
+  <TextBlock Text="放置建筑时，在鼠标周围显示由近及远渐淡的网格。 配置中可调整半径（3–15 格）、颜色和屏幕像素线宽。 只提供对齐参考，不改变建造规则。 默认开启。General.Radius 默认 8 格；Appearance.Color 和 LineWidthPixels 控制颜色与线宽。" Foreground="#DDCC88" TextWrapping="Wrap"/>
+  <StackPanel Orientation="Horizontal" Margin="0,16,0,12">
+    <Button Content="创意工坊 / 反馈" Command="{Binding OpenWorkshop}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="Ko-fi 支持" Command="{Binding OpenKoFi}" Visibility="{Binding KoFiVisibility}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="爱发电支持" Command="{Binding OpenAfdian}" Visibility="{Binding AfdianVisibility}" Padding="10,4"/>
+  </StackPanel>
+  <TextBlock Text="作者 Dongge · MIT 许可证。感谢 Rawra 提供脚本扩展器和创意工坊工具，感谢 BepInEx 与 Harmony 贡献者。" Foreground="#DDCC88" TextWrapping="Wrap"/>
+</StackPanel>

@@ -1,0 +1,12 @@
+<StackPanel xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Margin="16">
+  <TextBlock Text="Unit Stats" Foreground="White" FontSize="22" Margin="0,0,0,16"/>
+  <CheckBox Content="Show unit stats above recruitment and build menus" IsChecked="{Binding Enabled, Mode=TwoWay}" Foreground="White" Margin="0,0,0,16"/>
+  <TextBlock Text="Compare health, damage, range, arrows/bolts to kill and speed. Range shows tiles only. Damage is the most common value across sampled troop targets; hits to kill are estimates. - means no attack or unavailable data." Foreground="#DDCC88" TextWrapping="Wrap" Margin="0,0,0,8"/>
+  <TextBlock Text="Supports recruitment, engineer siege construction and tower engine menus. Adjust position in the Layout section of BepInEx\config\UnitStats_Dongge.cfg." Foreground="#DDCC88" TextWrapping="Wrap"/>
+  <StackPanel Orientation="Horizontal" Margin="0,16,0,12">
+    <Button Content="Workshop / Feedback" Command="{Binding OpenWorkshop}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="Support on Ko-fi" Command="{Binding OpenKoFi}" Visibility="{Binding KoFiVisibility}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="Support on Afdian" Command="{Binding OpenAfdian}" Visibility="{Binding AfdianVisibility}" Padding="10,4"/>
+  </StackPanel>
+  <TextBlock Text="By Dongge · MIT License. Thanks to Rawra for SHCDE Script Extender and Workshop tools, and the BepInEx and Harmony contributors." Foreground="#DDCC88" TextWrapping="Wrap"/>
+</StackPanel>

@@ -1,0 +1,13 @@
+{
+  "GUID": "BuildGrid_Dongge",
+  "Author": "Dongge",
+  "Name": "Build Grid",
+  "Description": "Shows a local tile grid around the cursor while placing buildings, to help align them. Client-side only.",
+  "Version": "1.0.2",
+  "Website": "",
+  "MinimumScriptExtenderVersion": "2.10.1",
+  "MaximumScriptExtenderVersion": "",
+  "Manifest": 1,
+  "NetworkMode": 0,
+  "WorkshopUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3809944416"
+}

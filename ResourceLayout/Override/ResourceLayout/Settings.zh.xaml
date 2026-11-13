@@ -1,0 +1,11 @@
+<StackPanel xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Margin="16">
+  <TextBlock Text="资源区智能排布 · Resource Layout" Foreground="White" FontSize="22" Margin="0,0,0,16" TextWrapping="Wrap"/>
+  <CheckBox Content="启用本功能" IsChecked="{Binding Enabled, Mode=TwoWay}" Foreground="White" Margin="0,0,0,16"/>
+  <TextBlock Text="Shift+X 规划农场，Shift+N 规划鼠标附近的采石场、铁矿或沥青坑。 点击图标选择农场；Shift+1…4 增加最少座数，Alt+Shift+1…4 减少。 左键固定，右键取消并清除已固定布局；单机中双击固定幽灵可建造，照常校验位置并扣资源。 明确区分已证明最优与限时内找到的最好布局；设置的最少座数不一定放得下。 采石场规划附带估算的系牛桩位置；实际效果受距离、拥堵及工人通行影响。新局/读档会清除固定布局。 默认开启，General.TimeLimitMs 默认 5000 毫秒。FarmSelection / FarmMinimums 保存选择。Debug.DebugTools 默认关闭，开发建造/删除键不属于日常操作。多人模式禁用双击直接建造及开发工具；规划功能联机未测试。" Foreground="#DDCC88" TextWrapping="Wrap"/>
+  <StackPanel Orientation="Horizontal" Margin="0,16,0,12">
+    <Button Content="创意工坊 / 反馈" Command="{Binding OpenWorkshop}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="Ko-fi 支持" Command="{Binding OpenKoFi}" Visibility="{Binding KoFiVisibility}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="爱发电支持" Command="{Binding OpenAfdian}" Visibility="{Binding AfdianVisibility}" Padding="10,4"/>
+  </StackPanel>
+  <TextBlock Text="作者 Dongge · MIT 许可证。感谢 Rawra 提供脚本扩展器和创意工坊工具，感谢 BepInEx 与 Harmony 贡献者。" Foreground="#DDCC88" TextWrapping="Wrap"/>
+</StackPanel>

@@ -1,0 +1,13 @@
+{
+  "GUID": "ContinuousRecruit_Dongge",
+  "Author": "Dongge",
+  "Name": "Continuous Recruit",
+  "Description": "Keeps recruiting chosen unit types while gold, weapons and peasants allow. Toggle per unit with right-click on its portrait or Shift+Alt+slot number. Uses the game's own recruit command.",
+  "Version": "1.0.2",
+  "Website": "",
+  "MinimumScriptExtenderVersion": "2.10.1",
+  "MaximumScriptExtenderVersion": "",
+  "Manifest": 1,
+  "NetworkMode": 0,
+  "WorkshopUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3810027038"
+}

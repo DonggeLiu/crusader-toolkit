@@ -1,0 +1,11 @@
+<StackPanel xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Margin="16">
+  <TextBlock Text="Granary Overview" Foreground="White" FontSize="22" Margin="0,0,0,16" TextWrapping="Wrap"/>
+  <CheckBox Content="Combine granary pages and show food estimates" IsChecked="{Binding Enabled, Mode=TwoWay}" Foreground="White" Margin="0,0,0,16"/>
+  <TextBlock Text="Combines food switches, stock, monthly changes and ration controls on one page, using the game’s icons. Shows estimated monthly balance and how long stock may last under each ration level. Suggests additional farms or bread-chain buildings when estimated production falls short. Production uses recent deliveries (up to three game months); market purchases do not count as production. Estimates need about a quarter month to warm up after loading. Enabled by default. Building counts and time remaining are estimates, affected by delivery distance and recent production. Without samples, building rates use fallback estimates. Debug.LogFood is off by default." Foreground="#DDCC88" TextWrapping="Wrap"/>
+  <StackPanel Orientation="Horizontal" Margin="0,16,0,12">
+    <Button Content="Workshop / Feedback" Command="{Binding OpenWorkshop}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="Support on Ko-fi" Command="{Binding OpenKoFi}" Visibility="{Binding KoFiVisibility}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="Support on Afdian" Command="{Binding OpenAfdian}" Visibility="{Binding AfdianVisibility}" Padding="10,4"/>
+  </StackPanel>
+  <TextBlock Text="By Dongge · MIT License. Thanks to Rawra for SHCDE Script Extender and Workshop tools, and the BepInEx and Harmony contributors." Foreground="#DDCC88" TextWrapping="Wrap"/>
+</StackPanel>

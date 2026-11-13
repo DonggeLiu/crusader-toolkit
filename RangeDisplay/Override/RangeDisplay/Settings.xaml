@@ -1,0 +1,14 @@
+<StackPanel xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Margin="16">
+  <TextBlock Text="Range Display" Foreground="White" FontSize="22" Margin="0,0,0,12"/>
+  <CheckBox Content="Show range rings (default toggle key: F8)" IsChecked="{Binding Enabled, Mode=TwoWay}" Foreground="White" Margin="0,0,0,10"/>
+  <CheckBox Content="Include siege engines (catapults, trebuchets, mangonels, ballistas, fire ballistas)" IsChecked="{Binding IncludeSiege, Mode=TwoWay}" Foreground="White" Margin="0,0,0,10"/>
+  <CheckBox Content="Show Healer search range" IsChecked="{Binding IncludeHealers, Mode=TwoWay}" Foreground="White" Margin="0,0,0,10"/>
+  <CheckBox Content="Preview range when placing towers" IsChecked="{Binding PreviewTowers, Mode=TwoWay}" Foreground="White" Margin="0,0,0,12"/>
+  <TextBlock Text="Dashed: range of selected ranged units and siege engines. Dotted: where a selected Healer looks for wounded (4 / 7 / 10 tiles on Stand Ground / Defensive / Aggressive); on a tower it outlines the whole tower. While placing a tower: archer range, plus mangonel (inner) and ballista (outer) as long dashes on Square and Round Towers. More options in BepInEx\config\RangeDisplay_Dongge.cfg." Foreground="#DDCC88" TextWrapping="Wrap"/>
+  <StackPanel Orientation="Horizontal" Margin="0,12,0,10">
+    <Button Content="Workshop / Feedback" Command="{Binding OpenWorkshop}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="Support on Ko-fi" Command="{Binding OpenKoFi}" Visibility="{Binding KoFiVisibility}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="Support on Afdian" Command="{Binding OpenAfdian}" Visibility="{Binding AfdianVisibility}" Padding="10,4"/>
+  </StackPanel>
+  <TextBlock Text="By Dongge · MIT License. Thanks to Rawra for SHCDE Script Extender and Workshop tools, and the BepInEx and Harmony contributors." Foreground="#DDCC88" TextWrapping="Wrap"/>
+</StackPanel>

@@ -1,0 +1,13 @@
+{
+  "GUID": "GranaryOverview_Dongge",
+  "Author": "Dongge",
+  "Name": "Granary Overview",
+  "Description": "Merges the granary's ration and food pages into one: per-food net change and sustainability, per-ration net change and months of supply, and a suggested ration. Client-side only.",
+  "Version": "1.0.2",
+  "Website": "",
+  "MinimumScriptExtenderVersion": "2.10.1",
+  "MaximumScriptExtenderVersion": "",
+  "Manifest": 1,
+  "NetworkMode": 0,
+  "WorkshopUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3809944812"
+}

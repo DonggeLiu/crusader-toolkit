@@ -1,0 +1,15 @@
+<StackPanel xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Margin="16">
+  <TextBlock Text="Health Bar Colors" Foreground="White" FontSize="22" Margin="0,0,0,16"/>
+  <CheckBox Content="Color health bars by side" IsChecked="{Binding Enabled, Mode=TwoWay}" Foreground="White" Margin="0,0,0,12"/>
+  <CheckBox Content="Keep health bars visible without selecting units" IsChecked="{Binding AlwaysShow, Mode=TwoWay}" Foreground="White" Margin="0,0,0,12"/>
+  <CheckBox Content="Color other players by shield color (yours stay green)" IsChecked="{Binding ShieldColors, Mode=TwoWay}" Foreground="White" Margin="0,0,0,12"/>
+  <CheckBox Content="Mark lords: slightly larger bar with a crown" IsChecked="{Binding MarkLord, Mode=TwoWay}" Foreground="White" Margin="0,0,0,16"/>
+  <TextBlock Text="Defaults: own units green, allies blue, enemies red. Neutral units keep their original appearance. Original shading and borders are preserved." Foreground="#DDCC88" TextWrapping="Wrap" Margin="0,0,0,8"/>
+  <TextBlock Text="Customize colors in the Colors section of BepInEx\config\HealthBarColors_Dongge.cfg, then restart the game. Range Display uses these faction colors when both mods are installed." Foreground="#DDCC88" TextWrapping="Wrap"/>
+  <StackPanel Orientation="Horizontal" Margin="0,16,0,12">
+    <Button Content="Workshop / Feedback" Command="{Binding OpenWorkshop}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="Support on Ko-fi" Command="{Binding OpenKoFi}" Visibility="{Binding KoFiVisibility}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="Support on Afdian" Command="{Binding OpenAfdian}" Visibility="{Binding AfdianVisibility}" Padding="10,4"/>
+  </StackPanel>
+  <TextBlock Text="By Dongge · MIT License. Thanks to Rawra for SHCDE Script Extender and Workshop tools, and the BepInEx and Harmony contributors." Foreground="#DDCC88" TextWrapping="Wrap"/>
+</StackPanel>

@@ -1,0 +1,13 @@
+{
+  "GUID": "BuildingProduction_Dongge",
+  "Author": "Dongge",
+  "Name": "Building Production",
+  "Description": "Shows what the selected production building actually consumed and produced last game month (and this month so far). Client-side only.",
+  "Version": "1.0.2",
+  "Website": "",
+  "MinimumScriptExtenderVersion": "2.10.1",
+  "MaximumScriptExtenderVersion": "",
+  "Manifest": 1,
+  "NetworkMode": 0,
+  "WorkshopUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3810026973"
+}

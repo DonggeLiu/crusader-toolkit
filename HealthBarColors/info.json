@@ -1,0 +1,15 @@
+{
+  "GUID": "HealthBarColors_Dongge",
+  "Author": "Dongge",
+  "Name": "Health Bar Colors",
+  "Description": "Colors unit health bars by side and optionally keeps them visible without selection. Shares faction colors with Range Display when installed. Client-side display only.",
+  "Version": "1.2.0",
+  "Website": "",
+  "MinimumScriptExtenderVersion": "2.10.1",
+  "MaximumScriptExtenderVersion": "",
+  "Manifest": 1,
+  "NetworkMode": 0,
+  "WorkshopUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3809525668",
+  "VersionCheckUrl": "",
+  "AssetMode": "Global"
+}

@@ -1,0 +1,11 @@
+<StackPanel xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Margin="16">
+  <TextBlock Text="连续招募 · Continuous Recruit" Foreground="White" FontSize="22" Margin="0,0,0,16" TextWrapping="Wrap"/>
+  <CheckBox Content="启用本功能" IsChecked="{Binding Enabled, Mode=TwoWay}" Foreground="White" Margin="0,0,0,16"/>
+  <TextBlock Text="右键兵种头像，或按 Shift+Alt+1…8 切换对应位置的兵种；开启后显示 ∞。 支持兵营、雇佣兵营地、贝都因营地、工程师行会、坑道兵行会和大教堂。 默认每秒为每个已开启兵种尝试招募一个，使用游戏原版招募命令，照常消耗资源并检查条件。 暂停或不满足条件时等待；新局、读档或关闭功能会清除全部已开启兵种。 功能默认开启，但须手动选择兵种才会招募。General.RecruitIntervalSeconds 可设 0.25–10 秒，默认 1 秒。" Foreground="#DDCC88" TextWrapping="Wrap"/>
+  <StackPanel Orientation="Horizontal" Margin="0,16,0,12">
+    <Button Content="创意工坊 / 反馈" Command="{Binding OpenWorkshop}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="Ko-fi 支持" Command="{Binding OpenKoFi}" Visibility="{Binding KoFiVisibility}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="爱发电支持" Command="{Binding OpenAfdian}" Visibility="{Binding AfdianVisibility}" Padding="10,4"/>
+  </StackPanel>
+  <TextBlock Text="作者 Dongge · MIT 许可证。感谢 Rawra 提供脚本扩展器和创意工坊工具，感谢 BepInEx 与 Harmony 贡献者。" Foreground="#DDCC88" TextWrapping="Wrap"/>
+</StackPanel>

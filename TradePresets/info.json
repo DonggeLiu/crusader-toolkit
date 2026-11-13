@@ -1,0 +1,13 @@
+{
+  "GUID": "TradePresets_Dongge",
+  "Author": "Dongge",
+  "Name": "Trade Presets",
+  "Description": "Applies saved market thresholds to new single-player games and records changes. Auto-trade remains off until enabled in the market.",
+  "Version": "1.0.2",
+  "Website": "",
+  "MinimumScriptExtenderVersion": "2.10.1",
+  "MaximumScriptExtenderVersion": "",
+  "Manifest": 1,
+  "NetworkMode": 0,
+  "WorkshopUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3810027335"
+}

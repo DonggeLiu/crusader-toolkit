@@ -1,0 +1,13 @@
+bin/
+obj/
+*.user
+.vs/
+_release/
+__pycache__/
+*.zip
+
+# Internal working files, kept local only
+_private/
+AGENTS.md
+CLAUDE.md
+.claude/

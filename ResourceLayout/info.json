@@ -1,0 +1,13 @@
+{
+  "GUID": "ResourceLayout_Dongge",
+  "Author": "Dongge",
+  "Name": "Resource Layout",
+  "Description": "Plans farm and industry ghost layouts; optional double-click construction in single-player. Multiplayer planning untested.",
+  "Version": "1.0.3",
+  "Website": "",
+  "MinimumScriptExtenderVersion": "2.10.1",
+  "MaximumScriptExtenderVersion": "",
+  "Manifest": 1,
+  "NetworkMode": 0,
+  "WorkshopUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3810027826"
+}

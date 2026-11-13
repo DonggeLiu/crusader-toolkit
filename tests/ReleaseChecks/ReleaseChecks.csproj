@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings></PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../GranaryOverview/src/FoodModel.cs" Link="FoodModel.cs" />
+    <Compile Include="../../BuildGrid/src/ReleaseText.cs" Link="BuildGridText.cs" />
+    <Compile Include="../../StockDelta/src/ReleaseText.cs" Link="StockDeltaText.cs" />
+    <Compile Include="../../GranaryOverview/src/ReleaseText.cs" Link="GranaryText.cs" />
+    <Compile Include="../../BuildingProduction/src/ReleaseText.cs" Link="ProductionText.cs" />
+    <Compile Include="../../ContinuousRecruit/src/ReleaseText.cs" Link="RecruitText.cs" />
+    <Compile Include="../../TradePresets/src/ReleaseText.cs" Link="TradeText.cs" />
+    <Compile Include="../../ResourceLayout/src/ReleaseText.cs" Link="LayoutText.cs" />
+    <Compile Include="../../ResourceLayout/src/LayoutTypes.cs" Link="LayoutTypes.cs" />
+  </ItemGroup>
+</Project>

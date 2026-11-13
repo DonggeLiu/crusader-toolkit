@@ -1,0 +1,13 @@
+{
+    "GUID":  "TargetPriority_Dongge",
+    "Author":  "Dongge",
+    "Name":  "Smart Shooters",
+    "Description":  "Your ranged units shoot the most dangerous enemies first: siege engines and enemy archers, then engineers, melee troops and hard-hitting workers; the hard-to-kill lord, rams and mantlets last. Ten categories with adjustable tiers; separate switches for your own, allied and enemy units. Arc-aware range check: archers also shoot enemies behind walls or on a keep when nothing else is in reach.",
+    "Version":  "1.5.0",
+    "Website":  "",
+    "MinimumScriptExtenderVersion":  "2.10.1",
+    "MaximumScriptExtenderVersion":  "",
+    "Manifest":  1,
+    "NetworkMode":  0,
+    "WorkshopUrl":  "https://steamcommunity.com/sharedfiles/filedetails/?id=3810645122"
+}

@@ -1,0 +1,14 @@
+<StackPanel xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Margin="16">
+  <TextBlock Text="Artful Dodger" Foreground="White" FontSize="22" Margin="0,0,0,12"/>
+  <CheckBox Content="Enable Artful Dodger" IsChecked="{Binding Enabled, Mode=TwoWay}" Foreground="White" Margin="0,0,0,8"/>
+  <CheckBox Content="Kite melee attackers (back off while staying in range)" IsChecked="{Binding KiteMelee, Mode=TwoWay}" Foreground="White" Margin="0,0,0,8"/>
+  <CheckBox Content="New horse archers start with dodging on" IsChecked="{Binding AutoEnableNew, Mode=TwoWay}" Foreground="White" Margin="0,0,0,12"/>
+  <TextBlock Text="In game, select horse archers and press Numpad . to toggle dodging for them. They stand and shoot, step aside only when an arrow, bolt, stone or fire pot is about to land on them, then carry on with your orders." Foreground="#DDCC88" TextWrapping="Wrap" Margin="0,0,0,6"/>
+  <TextBlock Text="Key: edit ToggleKey in BepInEx\config\SmartDodge_Dongge.cfg. Horse archers only; multiplayer untested." Foreground="#DDCC88" TextWrapping="Wrap"/>
+  <StackPanel Orientation="Horizontal" Margin="0,12,0,10">
+    <Button Content="Workshop / Feedback" Command="{Binding OpenWorkshop}" Visibility="{Binding WorkshopVisibility}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="Ko-fi" Command="{Binding OpenKoFi}" Visibility="{Binding KoFiVisibility}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="Afdian" Command="{Binding OpenAfdian}" Visibility="{Binding AfdianVisibility}" Padding="10,4"/>
+  </StackPanel>
+  <TextBlock Text="By Dongge · MIT License. Thanks to Rawra for the Script Extender and Workshop tools, and to the BepInEx and Harmony contributors." Foreground="#DDCC88" TextWrapping="Wrap"/>
+</StackPanel>

@@ -1,0 +1,12 @@
+<StackPanel xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Margin="16">
+  <TextBlock Text="单位属性" Foreground="White" FontSize="22" Margin="0,0,0,16"/>
+  <CheckBox Content="在招募/建造菜单上方显示单位属性表" IsChecked="{Binding Enabled, Mode=TwoWay}" Foreground="White" Margin="0,0,0,16"/>
+  <TextBlock Text="对比生命、伤害、射程、箭/弩命中致死次数和速度。射程只显示格数；伤害取目标数据表众数，致死次数为估算。- 表示无此攻击或数据不可用。" Foreground="#DDCC88" TextWrapping="Wrap" Margin="0,0,0,8"/>
+  <TextBlock Text="支持招募、工程师攻城器械及塔楼器械菜单。位置可在 BepInEx\config\UnitStats_Dongge.cfg 的 Layout 部分调整。" Foreground="#DDCC88" TextWrapping="Wrap"/>
+  <StackPanel Orientation="Horizontal" Margin="0,16,0,12">
+    <Button Content="创意工坊 / 反馈" Command="{Binding OpenWorkshop}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="Ko-fi 赞助" Command="{Binding OpenKoFi}" Visibility="{Binding KoFiVisibility}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="爱发电赞助" Command="{Binding OpenAfdian}" Visibility="{Binding AfdianVisibility}" Padding="10,4"/>
+  </StackPanel>
+  <TextBlock Text="作者 Dongge · MIT 许可证。感谢 Rawra 提供脚本扩展器与工坊工具，以及 BepInEx 和 Harmony 的贡献者。" Foreground="#DDCC88" TextWrapping="Wrap"/>
+</StackPanel>

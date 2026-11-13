@@ -1,0 +1,11 @@
+<StackPanel xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Margin="16">
+  <TextBlock Text="Building Production" Foreground="White" FontSize="22" Margin="0,0,0,16" TextWrapping="Wrap"/>
+  <CheckBox Content="Show actual consumption and production" IsChecked="{Binding Enabled, Mode=TwoWay}" Foreground="White" Margin="0,0,0,16"/>
+  <TextBlock Text="Resource icons show consumption in red and output in green. Large number: monthly average over up to 12 completed game months. Small number: this month so far. A dash means not enough history. Workshop product buttons remain usable. Quarry stone piles and unused dairy herds have stock bars. An amber quarry bar and ox warning mean the pile is at least 90% full; check transport. This does not calculate an exact ox-tether shortage. Enabled by default. Tracks local-player buildings. Statistics restart on new game/load; the month a building is constructed is excluded from its completed-month average. Debug.LogEvents is off by default." Foreground="#DDCC88" TextWrapping="Wrap"/>
+  <StackPanel Orientation="Horizontal" Margin="0,16,0,12">
+    <Button Content="Workshop / Feedback" Command="{Binding OpenWorkshop}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="Support on Ko-fi" Command="{Binding OpenKoFi}" Visibility="{Binding KoFiVisibility}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="Support on Afdian" Command="{Binding OpenAfdian}" Visibility="{Binding AfdianVisibility}" Padding="10,4"/>
+  </StackPanel>
+  <TextBlock Text="By Dongge · MIT License. Thanks to Rawra for SHCDE Script Extender and Workshop tools, and the BepInEx and Harmony contributors." Foreground="#DDCC88" TextWrapping="Wrap"/>
+</StackPanel>

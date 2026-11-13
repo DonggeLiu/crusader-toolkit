@@ -1,0 +1,11 @@
+<StackPanel xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Margin="16">
+  <TextBlock Text="建筑实际产出 · Building Production" Foreground="White" FontSize="22" Margin="0,0,0,16" TextWrapping="Wrap"/>
+  <CheckBox Content="启用本功能" IsChecked="{Binding Enabled, Mode=TwoWay}" Foreground="White" Margin="0,0,0,16"/>
+  <TextBlock Text="用物资图标显示消耗（红色）和产出（绿色）。 大字为最近最多 12 个完整游戏月的月平均，小字为本月至今；历史不足时显示横线。 保留作坊产品切换按钮；采石场石料堆及没有皮革作坊时的牛栏显示存量条。 采石场存量达到 90% 时显示琥珀色及牛运输提示，提醒检查运输；不计算精确缺少多少系牛桩。 默认开启，只统计本地玩家建筑。新局/读档重新统计，建筑建成当月不计入完整月份平均。Debug.LogEvents 默认关闭。" Foreground="#DDCC88" TextWrapping="Wrap"/>
+  <StackPanel Orientation="Horizontal" Margin="0,16,0,12">
+    <Button Content="创意工坊 / 反馈" Command="{Binding OpenWorkshop}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="Ko-fi 支持" Command="{Binding OpenKoFi}" Visibility="{Binding KoFiVisibility}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="爱发电支持" Command="{Binding OpenAfdian}" Visibility="{Binding AfdianVisibility}" Padding="10,4"/>
+  </StackPanel>
+  <TextBlock Text="作者 Dongge · MIT 许可证。感谢 Rawra 提供脚本扩展器和创意工坊工具，感谢 BepInEx 与 Harmony 贡献者。" Foreground="#DDCC88" TextWrapping="Wrap"/>
+</StackPanel>

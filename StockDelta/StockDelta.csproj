@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net481</TargetFramework>
+    <AssemblyName>StockDelta</AssemblyName>
+    <RootNamespace>StockDelta</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <Version>1.0.3</Version>
+    <DebugType>portable</DebugType>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <!-- 游戏安装目录：用 dotnet build -p:GameDir="..." 覆盖 -->
+  <PropertyGroup>
+    <GameDir Condition="'$(GameDir)' == ''">C:\Program Files (x86)\Steam\steamapps\common\Stronghold Crusader Definitive Edition</GameDir>
+    <ManagedDir>$(GameDir)\Stronghold Crusader Definitive Edition_Data\Managed</ManagedDir>
+    <ExtenderDir Condition="'$(ExtenderDir)' == ''">$(GameDir)\BepInEx\plugins\000shcdese</ExtenderDir>
+    <PluginInstallDir>$(GameDir)\BepInEx\plugins\StockDelta_Dongge</PluginInstallDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- 提供 .NET Framework 4.8.1 引用程序集，无需单独安装开发者包 -->
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="0Harmony"><HintPath>$(GameDir)\BepInEx\core\0Harmony.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="BepInEx"><HintPath>$(GameDir)\BepInEx\core\BepInEx.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine"><HintPath>$(ManagedDir)\UnityEngine.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(ManagedDir)\UnityEngine.CoreModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Noesis.NoesisGUI"><HintPath>$(ManagedDir)\Noesis.NoesisGUI.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.InputLegacyModule"><HintPath>$(ManagedDir)\UnityEngine.InputLegacyModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Assembly-CSharp"><HintPath>$(ManagedDir)\Assembly-CSharp.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="R3"><HintPath>$(ExtenderDir)\R3.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="SHCDESE"><HintPath>$(ExtenderDir)\SHCDESE.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+
+  <Target Name="CheckReferences" BeforeTargets="ResolveAssemblyReferences">
+    <Error Condition="!Exists('$(ManagedDir)\Assembly-CSharp.dll')" Text="找不到游戏目录：$(GameDir)。请用 -p:GameDir=&quot;你的安装目录&quot; 指定。" />
+    <Error Condition="!Exists('$(GameDir)\BepInEx\core\BepInEx.dll')" Text="找不到 BepInEx：请先安装 SHCDE 的 BepInEx 加载器。" />
+    <Error Condition="!Exists('$(ExtenderDir)\SHCDESE.dll')" Text="找不到脚本扩展器：$(ExtenderDir)\SHCDESE.dll" />
+  </Target>
+
+  <!-- 编译后自动安装到游戏的 BepInEx\plugins\StockDelta -->
+  <Target Name="InstallPlugin" AfterTargets="Build" Condition="'$(InstallToGame)' == 'true'">
+    <ItemGroup>
+      <OverrideFiles Include="Override\**\*" />
+    </ItemGroup>
+    <MakeDir Directories="$(PluginInstallDir)" />
+    <Copy SourceFiles="$(OutputPath)StockDelta.dll;$(OutputPath)StockDelta.pdb;info.json" DestinationFolder="$(PluginInstallDir)" />
+    <!-- Mod Options 面板的 XAML：扩展器从 插件目录\Override\ 下按相对路径加载 -->
+    <Copy SourceFiles="@(OverrideFiles)" DestinationFolder="$(PluginInstallDir)\Override\%(RecursiveDir)" />
+    <Message Importance="high" Text="已安装到 $(PluginInstallDir)" />
+  </Target>
+
+</Project>

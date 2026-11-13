@@ -1,0 +1,19 @@
+<StackPanel xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Margin="16">
+<TextBlock Text="自动调税" FontSize="22" Foreground="White" Margin="0,0,0,12"/>
+<CheckBox Content="新局默认启用自动调税（仅单人）" IsChecked="{Binding Enabled, Mode=TwoWay}" Foreground="White" Margin="0,0,0,10"/>
+<StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+<TextBlock Text="恢复民心下限" Width="280" Foreground="White" VerticalAlignment="Center"/>
+<Button Content="−" Command="{Binding Adjust}" CommandParameter="Lower:-1" Width="32"/>
+<TextBlock Text="{Binding Lower}" Width="64" TextAlignment="Center" Foreground="White" VerticalAlignment="Center"/>
+<Button Content="+" Command="{Binding Adjust}" CommandParameter="Lower:1" Width="32"/>
+</StackPanel>
+<StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+<TextBlock Text="开始收税的上限" Width="280" Foreground="White" VerticalAlignment="Center"/>
+<Button Content="−" Command="{Binding Adjust}" CommandParameter="Upper:-1" Width="32"/>
+<TextBlock Text="{Binding Upper}" Width="64" TextAlignment="Center" Foreground="White" VerticalAlignment="Center"/>
+<Button Content="+" Command="{Binding Adjust}" CommandParameter="Upper:1" Width="32"/>
+</StackPanel>
+<TextBlock Text="这里只设置新局默认值；本局请在税收界面调整，随游戏存档保存。旧存档无设置时采用此默认值。默认开启，目标区间 99–99.5，每次调整 0.25。按食物等实际民心贡献动态选税档：到下限选能恢复民心的最高税档，到上限选适度消耗民心的税档；有合适的持平税档就保持。达到 100 时立即重新评估，尽量提前避免封顶。恢复不一定是零税，加成变化会重新计算。税档的单次变化可能大于目标区间，因此上下限不是硬保证。自动策略永不补贴。手动选择补贴时保持你的选择，切回零税或征税后恢复接管。缺粮等问题可能仍需手动处理。关闭本 mod 保留当前税率。" TextWrapping="Wrap" Foreground="#DDCC88" Margin="0,8,0,12"/>
+<TextBlock Text="{Binding Status}" TextWrapping="Wrap" Foreground="White"/>
+<TextBlock Text="Dongge · MIT · Thanks to Rawra, BepInEx and Harmony contributors." TextWrapping="Wrap" Foreground="#DDCC88" Margin="0,16,0,0"/>
+</StackPanel>

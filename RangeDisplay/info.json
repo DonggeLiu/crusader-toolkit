@@ -1,0 +1,15 @@
+{
+  "GUID": "RangeDisplay_Dongge",
+  "Author": "Dongge",
+  "Name": "Range Display",
+  "Description": "Draws the attack range of selected ranged units and siege engines (yours, allies' and enemies'), the Healer search range, and tower ranges while placing towers. Client-side only.",
+  "Version": "1.4.0",
+  "Website": "",
+  "VersionCheckUrl": "",
+  "WorkshopUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3808768637",
+  "MinimumScriptExtenderVersion": "2.10.1",
+  "MaximumScriptExtenderVersion": "",
+  "Manifest": 1,
+  "AssetMode": "Global",
+  "NetworkMode": 0
+}

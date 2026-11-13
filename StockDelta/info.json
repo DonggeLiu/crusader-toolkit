@@ -1,0 +1,13 @@
+﻿{
+    "GUID":  "StockDelta_Dongge",
+    "Author":  "Dongge",
+    "Name":  "Stock Delta",
+    "Description":  "Shows each good\u0027s net stock change for the last game month (and this month so far) under its count in the stockpile, granary and armoury panels. Client-side only.",
+    "Version":  "1.0.3",
+    "Website":  "",
+    "MinimumScriptExtenderVersion":  "2.10.1",
+    "MaximumScriptExtenderVersion":  "",
+    "Manifest":  1,
+    "NetworkMode":  0,
+    "WorkshopUrl":  "https://steamcommunity.com/sharedfiles/filedetails/?id=3809944613"
+}

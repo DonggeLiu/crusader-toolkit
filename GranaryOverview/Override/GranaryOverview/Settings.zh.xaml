@@ -1,0 +1,11 @@
+<StackPanel xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Margin="16">
+  <TextBlock Text="粮仓总览 · Granary Overview" Foreground="White" FontSize="22" Margin="0,0,0,16" TextWrapping="Wrap"/>
+  <CheckBox Content="启用本功能" IsChecked="{Binding Enabled, Mode=TwoWay}" Foreground="White" Margin="0,0,0,16"/>
+  <TextBlock Text="合并食物开关、库存、月度变化和配给按钮，沿用游戏图标。 估算各配给等级的月度收支和库存可维持时间。 预计产量不足时，提示补建农场或面包产业链建筑。 产量来自最近最多三个游戏月的工人送货，不将市场买入算作生产；读档后约需四分之一个月积累数据。 默认开启。补建座数和剩余时间均为估算，受运输距离及近期产量影响；没有样本时使用默认产量。Debug.LogFood 默认关闭。" Foreground="#DDCC88" TextWrapping="Wrap"/>
+  <StackPanel Orientation="Horizontal" Margin="0,16,0,12">
+    <Button Content="创意工坊 / 反馈" Command="{Binding OpenWorkshop}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="Ko-fi 支持" Command="{Binding OpenKoFi}" Visibility="{Binding KoFiVisibility}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="爱发电支持" Command="{Binding OpenAfdian}" Visibility="{Binding AfdianVisibility}" Padding="10,4"/>
+  </StackPanel>
+  <TextBlock Text="作者 Dongge · MIT 许可证。感谢 Rawra 提供脚本扩展器和创意工坊工具，感谢 BepInEx 与 Harmony 贡献者。" Foreground="#DDCC88" TextWrapping="Wrap"/>
+</StackPanel>

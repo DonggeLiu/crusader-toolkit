@@ -1,0 +1,1 @@
+<Project Sdk="Microsoft.NET.Sdk"><PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings></PropertyGroup><ItemGroup><Compile Include="../../AutoTax/src/TaxPolicy.cs" Link="TaxPolicy.cs" /><Compile Include="../../AutoTax/src/MatchOptions.cs" Link="MatchOptions.cs" /></ItemGroup></Project>

@@ -1,0 +1,11 @@
+<StackPanel xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Margin="16">
+  <TextBlock Text="Continuous Recruit" Foreground="White" FontSize="22" Margin="0,0,0,16" TextWrapping="Wrap"/>
+  <CheckBox Content="Enable continuous recruitment" IsChecked="{Binding Enabled, Mode=TwoWay}" Foreground="White" Margin="0,0,0,16"/>
+  <TextBlock Text="Right-click a troop portrait or press Shift+Alt+1…8 to toggle that slot. Active portraits show ∞. Supports Barracks, Mercenary Post, Bedouin Stockade, Engineers Guild, Tunnelers Guild and Cathedral. By default, attempts one recruit per enabled troop type every second using the game’s normal recruitment command. Normal costs and requirements still apply. Recruitment waits during pause or when requirements are unmet. New games, loads and disabling the feature clear all active troop types. Feature enabled by default; no troop type is active until you choose one. General.RecruitIntervalSeconds accepts 0.25–10 seconds (default 1)." Foreground="#DDCC88" TextWrapping="Wrap"/>
+  <StackPanel Orientation="Horizontal" Margin="0,16,0,12">
+    <Button Content="Workshop / Feedback" Command="{Binding OpenWorkshop}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="Support on Ko-fi" Command="{Binding OpenKoFi}" Visibility="{Binding KoFiVisibility}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="Support on Afdian" Command="{Binding OpenAfdian}" Visibility="{Binding AfdianVisibility}" Padding="10,4"/>
+  </StackPanel>
+  <TextBlock Text="By Dongge · MIT License. Thanks to Rawra for SHCDE Script Extender and Workshop tools, and the BepInEx and Harmony contributors." Foreground="#DDCC88" TextWrapping="Wrap"/>
+</StackPanel>

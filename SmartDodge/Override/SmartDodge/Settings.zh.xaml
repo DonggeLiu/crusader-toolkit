@@ -1,0 +1,14 @@
+<StackPanel xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Margin="16">
+  <TextBlock Text="神骑妙躲 · Artful Dodger" Foreground="White" FontSize="22" Margin="0,0,0,12"/>
+  <CheckBox Content="启用神骑妙躲" IsChecked="{Binding Enabled, Mode=TwoWay}" Foreground="White" Margin="0,0,0,8"/>
+  <CheckBox Content="躲避近战（风筝：后撤并保持在射程内）" IsChecked="{Binding KiteMelee, Mode=TwoWay}" Foreground="White" Margin="0,0,0,8"/>
+  <CheckBox Content="新招募的弓骑兵默认开启躲避" IsChecked="{Binding AutoEnableNew, Mode=TwoWay}" Foreground="White" Margin="0,0,0,12"/>
+  <TextBlock Text="游戏中选中弓骑兵，按小键盘 . 切换这些弓骑兵的躲避模式。开启后它们原地射击，只在箭、弩箭、石头或火罐快要落到身上时让开，躲完继续执行你的命令。" Foreground="#DDCC88" TextWrapping="Wrap" Margin="0,0,0,6"/>
+  <TextBlock Text="快捷键：编辑 BepInEx\config\SmartDodge_Dongge.cfg 的 ToggleKey。仅弓骑兵；联机未测试。" Foreground="#DDCC88" TextWrapping="Wrap"/>
+  <StackPanel Orientation="Horizontal" Margin="0,12,0,10">
+    <Button Content="创意工坊 / 反馈" Command="{Binding OpenWorkshop}" Visibility="{Binding WorkshopVisibility}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="Ko-fi 赞助" Command="{Binding OpenKoFi}" Visibility="{Binding KoFiVisibility}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="爱发电赞助" Command="{Binding OpenAfdian}" Visibility="{Binding AfdianVisibility}" Padding="10,4"/>
+  </StackPanel>
+  <TextBlock Text="作者 Dongge · MIT 许可证。感谢 Rawra 提供脚本扩展器与工坊工具，以及 BepInEx 和 Harmony 的贡献者。" Foreground="#DDCC88" TextWrapping="Wrap"/>
+</StackPanel>

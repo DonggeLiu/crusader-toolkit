@@ -1,0 +1,97 @@
+<StackPanel xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Margin="16">
+  <TextBlock Text="Smart Shooters" Foreground="White" FontSize="22" Margin="0,0,0,4" TextWrapping="Wrap"/>
+  <StackPanel Orientation="Horizontal" Margin="0,0,0,4">
+    <TextBlock Text="Ranged units: " Foreground="White" VerticalAlignment="Center"/>
+    <CheckBox Content="Mine" IsChecked="{Binding Enabled, Mode=TwoWay}" Foreground="White" Margin="0,0,16,0"/>
+    <CheckBox Content="Allies" IsChecked="{Binding ApplyToAllies, Mode=TwoWay}" Foreground="White" Margin="0,0,16,0"/>
+    <CheckBox Content="Enemies" IsChecked="{Binding ApplyToEnemies, Mode=TwoWay}" Foreground="White"/>
+  </StackPanel>
+  <CheckBox Content="Allocate fire by what it takes to kill" IsChecked="{Binding AllocateFire, Mode=TwoWay}" Foreground="White"/>
+  <TextBlock Text="Vanilla spreads arrows thin; once an enemy has enough fire to die, the rest pick the next." Foreground="#DDCC88" TextWrapping="Wrap" Margin="24,0,0,4"/>
+  <CheckBox Content="Arc-aware range check" IsChecked="{Binding ShootOverWalls, Mode=TwoWay}" Foreground="White"/>
+  <TextBlock Text="Vanilla only auto-fires in a straight line; this also shoots enemies behind walls." Foreground="#DDCC88" TextWrapping="Wrap" Margin="24,0,0,6"/>
+  <StackPanel Orientation="Horizontal" Margin="0,0,0,4">
+    <TextBlock Text="Shooting priority (1 = first, 10 = last):" Foreground="White" VerticalAlignment="Center" Margin="0,0,12,0"/>
+    <Button Content="Reset" Command="{Binding ResetOrder}" Padding="8,1"/>
+  </StackPanel>
+  <Grid Margin="0,0,0,6">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto"/>
+      <ColumnDefinition Width="Auto"/>
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+    <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Margin="0,0,12,0">
+      <Button Content="-" Command="{Binding Earlier}" CommandParameter="SiegeEngines" Width="24" Padding="0,1"/>
+      <TextBlock Text="{Binding TierSiegeEngines}" Foreground="White" Width="22" TextAlignment="Center" VerticalAlignment="Center"/>
+      <Button Content="+" Command="{Binding Later}" CommandParameter="SiegeEngines" Width="24" Padding="0,1" Margin="0,0,8,0"/>
+      <TextBlock Text="Catapults and ballistas" Foreground="White" VerticalAlignment="Center"/>
+    </StackPanel>
+    <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" Margin="0,0,12,0">
+      <Button Content="-" Command="{Binding Earlier}" CommandParameter="Ranged" Width="24" Padding="0,1"/>
+      <TextBlock Text="{Binding TierRanged}" Foreground="White" Width="22" TextAlignment="Center" VerticalAlignment="Center"/>
+      <Button Content="+" Command="{Binding Later}" CommandParameter="Ranged" Width="24" Padding="0,1" Margin="0,0,8,0"/>
+      <TextBlock Text="Ranged troops" Foreground="White" VerticalAlignment="Center"/>
+    </StackPanel>
+    <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" Margin="0,0,12,0">
+      <Button Content="-" Command="{Binding Earlier}" CommandParameter="Engineers" Width="24" Padding="0,1"/>
+      <TextBlock Text="{Binding TierEngineers}" Foreground="White" Width="22" TextAlignment="Center" VerticalAlignment="Center"/>
+      <Button Content="+" Command="{Binding Later}" CommandParameter="Engineers" Width="24" Padding="0,1" Margin="0,0,8,0"/>
+      <TextBlock Text="Engineers" Foreground="White" VerticalAlignment="Center"/>
+    </StackPanel>
+    <StackPanel Grid.Row="3" Grid.Column="0" Orientation="Horizontal" Margin="0,0,12,0">
+      <Button Content="-" Command="{Binding Earlier}" CommandParameter="Melee" Width="24" Padding="0,1"/>
+      <TextBlock Text="{Binding TierMelee}" Foreground="White" Width="22" TextAlignment="Center" VerticalAlignment="Center"/>
+      <Button Content="+" Command="{Binding Later}" CommandParameter="Melee" Width="24" Padding="0,1" Margin="0,0,8,0"/>
+      <TextBlock Text="Melee troops" Foreground="White" VerticalAlignment="Center"/>
+    </StackPanel>
+    <StackPanel Grid.Row="4" Grid.Column="0" Orientation="Horizontal" Margin="0,0,12,0">
+      <Button Content="-" Command="{Binding Earlier}" CommandParameter="ArmedWorkers" Width="24" Padding="0,1"/>
+      <TextBlock Text="{Binding TierArmedWorkers}" Foreground="White" Width="22" TextAlignment="Center" VerticalAlignment="Center"/>
+      <Button Content="+" Command="{Binding Later}" CommandParameter="ArmedWorkers" Width="24" Padding="0,1" Margin="0,0,8,0"/>
+      <TextBlock Text="Armed workers and beasts" Foreground="White" VerticalAlignment="Center"/>
+    </StackPanel>
+    <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" Margin="0,0,12,0">
+      <Button Content="-" Command="{Binding Earlier}" CommandParameter="Civilians" Width="24" Padding="0,1"/>
+      <TextBlock Text="{Binding TierCivilians}" Foreground="White" Width="22" TextAlignment="Center" VerticalAlignment="Center"/>
+      <Button Content="+" Command="{Binding Later}" CommandParameter="Civilians" Width="24" Padding="0,1" Margin="0,0,8,0"/>
+      <TextBlock Text="Other civilians and animals" Foreground="White" VerticalAlignment="Center"/>
+    </StackPanel>
+    <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" Margin="0,0,12,0">
+      <Button Content="-" Command="{Binding Earlier}" CommandParameter="Support" Width="24" Padding="0,1"/>
+      <TextBlock Text="{Binding TierSupport}" Foreground="White" Width="22" TextAlignment="Center" VerticalAlignment="Center"/>
+      <Button Content="+" Command="{Binding Later}" CommandParameter="Support" Width="24" Padding="0,1" Margin="0,0,8,0"/>
+      <TextBlock Text="Tunnelers and support" Foreground="White" VerticalAlignment="Center"/>
+    </StackPanel>
+    <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" Margin="0,0,12,0">
+      <Button Content="-" Command="{Binding Earlier}" CommandParameter="Lord" Width="24" Padding="0,1"/>
+      <TextBlock Text="{Binding TierLord}" Foreground="White" Width="22" TextAlignment="Center" VerticalAlignment="Center"/>
+      <Button Content="+" Command="{Binding Later}" CommandParameter="Lord" Width="24" Padding="0,1" Margin="0,0,8,0"/>
+      <TextBlock Text="Lords" Foreground="White" VerticalAlignment="Center"/>
+    </StackPanel>
+    <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" Margin="0,0,12,0">
+      <Button Content="-" Command="{Binding Earlier}" CommandParameter="SiegeEquipment" Width="24" Padding="0,1"/>
+      <TextBlock Text="{Binding TierSiegeEquipment}" Foreground="White" Width="22" TextAlignment="Center" VerticalAlignment="Center"/>
+      <Button Content="+" Command="{Binding Later}" CommandParameter="SiegeEquipment" Width="24" Padding="0,1" Margin="0,0,8,0"/>
+      <TextBlock Text="Rams, towers and laddermen" Foreground="White" VerticalAlignment="Center"/>
+    </StackPanel>
+    <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Horizontal" Margin="0,0,12,0">
+      <Button Content="-" Command="{Binding Earlier}" CommandParameter="Shield" Width="24" Padding="0,1"/>
+      <TextBlock Text="{Binding TierShield}" Foreground="White" Width="22" TextAlignment="Center" VerticalAlignment="Center"/>
+      <Button Content="+" Command="{Binding Later}" CommandParameter="Shield" Width="24" Padding="0,1" Margin="0,0,8,0"/>
+      <TextBlock Text="Mantlets" Foreground="White" VerticalAlignment="Center"/>
+    </StackPanel>
+  </Grid>
+  <TextBlock Text="Nearer first within a tier; a target in range is kept (as vanilla). Siege engines: catapults, trebuchets, mounted mangonels and ballistas, fire ballistas. Armed workers: woodcutters, stonemasons, quarry workers, blacksmiths, hunters. Your own siege engines keep vanilla targeting." Foreground="#DDCC88" TextWrapping="Wrap"/>
+  <StackPanel Orientation="Horizontal" Margin="0,6,0,6">
+    <Button Content="Workshop / Feedback" Command="{Binding OpenWorkshop}" Visibility="{Binding WorkshopVisibility}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="Support on Ko-fi" Command="{Binding OpenKoFi}" Visibility="{Binding KoFiVisibility}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="Support on Afdian" Command="{Binding OpenAfdian}" Visibility="{Binding AfdianVisibility}" Padding="10,4"/>
+  </StackPanel>
+  <TextBlock Text="By Dongge · MIT License. Thanks to Rawra for SHCDE Script Extender and Workshop tools, and the BepInEx and Harmony contributors." Foreground="#DDCC88" TextWrapping="Wrap"/>
+</StackPanel>

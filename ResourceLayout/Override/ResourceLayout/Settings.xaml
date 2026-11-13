@@ -1,0 +1,11 @@
+<StackPanel xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Margin="16">
+  <TextBlock Text="Resource Layout" Foreground="White" FontSize="22" Margin="0,0,0,16" TextWrapping="Wrap"/>
+  <CheckBox Content="Enable resource-area layout planning" IsChecked="{Binding Enabled, Mode=TwoWay}" Foreground="White" Margin="0,0,0,16"/>
+  <TextBlock Text="Shift+X plans farms; Shift+N plans quarries, iron mines or pitch rigs under the cursor. Choose farm types with the icons. Shift+1…4 increases the minimum; Alt+Shift+1…4 decreases it. Left-click pins a layout; right-click cancels and clears pinned layouts. Double-click a pinned ghost to build in single-player, with normal placement checks and costs. The solver distinguishes proven optimal layouts from the best found before its time limit. Minimum counts may be impossible to fit. Quarry plans include estimated ox-tether positions. Distance, congestion and worker access can affect actual results. Pinned layouts reset on new game/load. Enabled by default. General.TimeLimitMs defaults to 5000. FarmSelection and FarmMinimums remember your choices. Debug.DebugTools defaults to false; developer build/delete shortcuts are not normal gameplay controls. Direct ghost construction and developer tools are disabled in multiplayer; planning is multiplayer untested." Foreground="#DDCC88" TextWrapping="Wrap"/>
+  <StackPanel Orientation="Horizontal" Margin="0,16,0,12">
+    <Button Content="Workshop / Feedback" Command="{Binding OpenWorkshop}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="Support on Ko-fi" Command="{Binding OpenKoFi}" Visibility="{Binding KoFiVisibility}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="Support on Afdian" Command="{Binding OpenAfdian}" Visibility="{Binding AfdianVisibility}" Padding="10,4"/>
+  </StackPanel>
+  <TextBlock Text="By Dongge · MIT License. Thanks to Rawra for SHCDE Script Extender and Workshop tools, and the BepInEx and Harmony contributors." Foreground="#DDCC88" TextWrapping="Wrap"/>
+</StackPanel>

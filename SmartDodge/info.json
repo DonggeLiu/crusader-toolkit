@@ -1,0 +1,13 @@
+﻿{
+    "GUID":  "SmartDodge_Dongge",
+    "Author":  "Dongge",
+    "Name":  "Artful Dodger",
+    "Description":  "Horse archers keep shooting and step aside only when an arrow, bolt, stone or fire pot is about to land on them; they also kite melee attackers while staying in range.",
+    "Version":  "1.0.1",
+    "Website":  "",
+    "MinimumScriptExtenderVersion":  "2.10.1",
+    "MaximumScriptExtenderVersion":  "",
+    "Manifest":  1,
+    "NetworkMode":  0,
+    "WorkshopUrl":  "https://steamcommunity.com/sharedfiles/filedetails/?id=3811169708"
+}

@@ -1,0 +1,14 @@
+<StackPanel xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Margin="16">
+  <TextBlock Text="射程显示 Range Display" Foreground="White" FontSize="22" Margin="0,0,0,12"/>
+  <CheckBox Content="启用射程显示（默认开关键：F8）" IsChecked="{Binding Enabled, Mode=TwoWay}" Foreground="White" Margin="0,0,0,10"/>
+  <CheckBox Content="显示攻城器械射程（投石车、投石机、散射机、弩炮、火弩车）" IsChecked="{Binding IncludeSiege, Mode=TwoWay}" Foreground="White" Margin="0,0,0,10"/>
+  <CheckBox Content="显示军医搜索范围" IsChecked="{Binding IncludeHealers, Mode=TwoWay}" Foreground="White" Margin="0,0,0,10"/>
+  <CheckBox Content="放置塔楼时预览射程" IsChecked="{Binding PreviewTowers, Mode=TwoWay}" Foreground="White" Margin="0,0,0,12"/>
+  <TextBlock Text="虚线：选中的远程部队、攻城器械的射程。点线：选中军医搜索伤员的范围（原地防守 4 格、防御姿态 7 格、进攻姿态 10 格），站在塔上时框出整座塔。放置塔楼时预览塔上弓箭手射程，方塔、圆塔另用长虚线画散射机（内）、弩炮（外）射程。颜色、线宽等见 BepInEx\config\RangeDisplay_Dongge.cfg。" Foreground="#DDCC88" TextWrapping="Wrap"/>
+  <StackPanel Orientation="Horizontal" Margin="0,12,0,10">
+    <Button Content="创意工坊 / 反馈" Command="{Binding OpenWorkshop}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="Ko-fi 支持作者" Command="{Binding OpenKoFi}" Visibility="{Binding KoFiVisibility}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="爱发电支持作者" Command="{Binding OpenAfdian}" Visibility="{Binding AfdianVisibility}" Padding="10,4"/>
+  </StackPanel>
+  <TextBlock Text="作者 Dongge · MIT 许可证。感谢 Rawra 提供 SHCDE 脚本扩展器和工坊工具，感谢 BepInEx、Harmony 的贡献者。" Foreground="#DDCC88" TextWrapping="Wrap"/>
+</StackPanel>

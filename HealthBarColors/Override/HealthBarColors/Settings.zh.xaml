@@ -1,0 +1,15 @@
+<StackPanel xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Margin="16">
+  <TextBlock Text="血条颜色" Foreground="White" FontSize="22" Margin="0,0,0,16"/>
+  <CheckBox Content="按阵营给血条着色" IsChecked="{Binding Enabled, Mode=TwoWay}" Foreground="White" Margin="0,0,0,12"/>
+  <CheckBox Content="未选中单位时也显示血条" IsChecked="{Binding AlwaysShow, Mode=TwoWay}" Foreground="White" Margin="0,0,0,12"/>
+  <CheckBox Content="其他玩家按盾牌颜色区分（己方仍为绿色）" IsChecked="{Binding ShieldColors, Mode=TwoWay}" Foreground="White" Margin="0,0,0,12"/>
+  <CheckBox Content="标出领主：血条略大，头顶戴皇冠" IsChecked="{Binding MarkLord, Mode=TwoWay}" Foreground="White" Margin="0,0,0,16"/>
+  <TextBlock Text="默认：己方绿色、友方蓝色、敌方红色；中立单位保持原样。颜色保留原血条的明暗和边框。" Foreground="#DDCC88" TextWrapping="Wrap" Margin="0,0,0,8"/>
+  <TextBlock Text="自定义颜色：编辑 BepInEx\config\HealthBarColors_Dongge.cfg 的 Colors 部分，然后重启游戏。安装 Range Display 时，射程圈也会使用这里的阵营颜色。" Foreground="#DDCC88" TextWrapping="Wrap"/>
+  <StackPanel Orientation="Horizontal" Margin="0,16,0,12">
+    <Button Content="创意工坊 / 反馈" Command="{Binding OpenWorkshop}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="Ko-fi 赞助" Command="{Binding OpenKoFi}" Visibility="{Binding KoFiVisibility}" Padding="10,4" Margin="0,0,12,0"/>
+    <Button Content="爱发电赞助" Command="{Binding OpenAfdian}" Visibility="{Binding AfdianVisibility}" Padding="10,4"/>
+  </StackPanel>
+  <TextBlock Text="作者 Dongge · MIT 许可证。感谢 Rawra 提供脚本扩展器与工坊工具，以及 BepInEx 和 Harmony 的贡献者。" Foreground="#DDCC88" TextWrapping="Wrap"/>
+</StackPanel>

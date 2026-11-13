@@ -1,0 +1,19 @@
+<StackPanel xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Margin="16">
+<TextBlock Text="Auto Tax" FontSize="22" Foreground="White" Margin="0,0,0,12"/>
+<CheckBox Content="Enable by default for new single-player games" IsChecked="{Binding Enabled, Mode=TwoWay}" Foreground="White" Margin="0,0,0,10"/>
+<StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+<TextBlock Text="Recovery target" Width="280" Foreground="White" VerticalAlignment="Center"/>
+<Button Content="−" Command="{Binding Adjust}" CommandParameter="Lower:-1" Width="32"/>
+<TextBlock Text="{Binding Lower}" Width="64" TextAlignment="Center" Foreground="White" VerticalAlignment="Center"/>
+<Button Content="+" Command="{Binding Adjust}" CommandParameter="Lower:1" Width="32"/>
+</StackPanel>
+<StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+<TextBlock Text="Harvest target" Width="280" Foreground="White" VerticalAlignment="Center"/>
+<Button Content="−" Command="{Binding Adjust}" CommandParameter="Upper:-1" Width="32"/>
+<TextBlock Text="{Binding Upper}" Width="64" TextAlignment="Center" Foreground="White" VerticalAlignment="Center"/>
+<Button Content="+" Command="{Binding Adjust}" CommandParameter="Upper:1" Width="32"/>
+</StackPanel>
+<TextBlock Text="New-game defaults only. Change this game in the tax panel; settings travel with its save. Older saves without settings use these defaults. On by default. Target band 99–99.5; buttons adjust by 0.25. Tax levels adapt to actual food and other popularity effects. At the lower target, choose the highest tax that still restores popularity; at the upper target, use the first suitable deficit. Hold a balanced tax when available. Re-evaluate immediately at 100 and anticipate known cap overflow. Recovery need not mean zero tax. Discrete changes may exceed the target band, so bounds are not guarantees. Automation never selects donations. Manual donations are preserved until you return to no tax or taxation. Shortages may need manual attention. Disabling preserves the current tax." TextWrapping="Wrap" Foreground="#DDCC88" Margin="0,8,0,12"/>
+<TextBlock Text="{Binding Status}" TextWrapping="Wrap" Foreground="White"/>
+<TextBlock Text="Dongge · MIT · Thanks to Rawra, BepInEx and Harmony contributors." TextWrapping="Wrap" Foreground="#DDCC88" Margin="0,16,0,0"/>
+</StackPanel>

@@ -1,0 +1,13 @@
+{
+  "GUID": "AutoTax_Dongge",
+  "Author": "Dongge",
+  "Name": "Auto Tax",
+  "Description": "Dynamically adjusts local single-player taxes to maintain high popularity. Never selects donations automatically.",
+  "Version": "1.0.0",
+  "Website": "",
+  "MinimumScriptExtenderVersion": "2.10.1",
+  "MaximumScriptExtenderVersion": "",
+  "Manifest": 1,
+  "NetworkMode": 0,
+  "WorkshopUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3816416634"
+}

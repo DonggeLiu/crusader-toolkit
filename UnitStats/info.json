@@ -1,0 +1,15 @@
+﻿{
+    "GUID":  "UnitStats_Dongge",
+    "Author":  "Dongge",
+    "Name":  "Unit Stats",
+    "Description":  "Compare unit health, damage, range, projectile resistance and speed above recruitment and siege menus. Client-side display; multiplayer untested.",
+    "Version":  "1.0.2",
+    "Website":  "",
+    "MinimumScriptExtenderVersion":  "2.10.1",
+    "MaximumScriptExtenderVersion":  "",
+    "Manifest":  1,
+    "NetworkMode":  0,
+    "VersionCheckUrl":  "",
+    "AssetMode":  "Global",
+    "WorkshopUrl":  "https://steamcommunity.com/sharedfiles/filedetails/?id=3809728007"
+}
